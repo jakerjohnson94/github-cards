@@ -5,8 +5,8 @@ const GITHUB_FETCH_URL = 'https://api.github.com/users/jakerjohnson94';
 const Card = props => (
   <div className="card">
     <div className="card-image">
-      <figure className="image is-4">
-        <img src={props.avatar_url} alt="Github Profile Image" />
+      <figure className="image">
+        <img src={props.avatar_url} alt="Github Profile" />
       </figure>
     </div>
     <div className="card-content">
@@ -45,22 +45,26 @@ class App extends Component {
     const isActive = this.state.active;
     return (
       <React.Fragment>
-        <div className="buttonWrapper">
-          <button id="cardBtn" className="button" onClick={this.handleClick}>
-            Toggle Card
-          </button>
-        </div>
-        <div className="cardWrapper">
-          {isActive ? (
-            <Card
-              avatar_url={user.avatar_url}
-              name={user.name}
-              location={user.location}
-              bio={user.bio}
-              public_repos={user.public_repos}
-            />
-          ) : null}
-        </div>
+        <section className="section">
+          <div className="columns">
+            <div className="column is-4 has-text-centered">
+              <button id="cardBtn" className="button is-large is-light" onClick={this.handleClick}>
+                Toggle Card
+              </button>
+            </div>
+            <div className="column is-6">
+              {isActive ? (
+                <Card
+                  avatar_url={user.avatar_url}
+                  name={user.name}
+                  location={user.location}
+                  bio={user.bio}
+                  public_repos={user.public_repos}
+                />
+              ) : null}
+            </div>
+          </div>
+        </section>
       </React.Fragment>
     );
   }

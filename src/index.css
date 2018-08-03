@@ -1,18 +1,21 @@
 body,
 #root {
-  margin: 5em;
+  /* margin: 5em; */
   padding: 0;
   font-family: sans-serif;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
-.cardWrapper {
+.image,
+img {
+}
+/* .cardWrapper {
   width: 60%;
-}
-.buttonWrapper {
+} */
+/* .buttonWrapper {
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
-}
+} */
